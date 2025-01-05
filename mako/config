@@ -1,0 +1,8 @@
+background-color=#000000aa
+border-color=#ffffff
+border-radius=8
+default-timeout=10000
+font=JetBrainsMono Nerd Font
+on-button-middle=dismiss-all
+on-button-right=dismiss-group
+text-color=#ffffff
