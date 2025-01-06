@@ -5,3 +5,4 @@ This repo contains the config files for the following programs:
 - link:https://github.com/philj56/tofi[tofi]
 - link:https://github.com/emersion/mako[mako]
 - link:https://github.com/MusicPlayerDaemon/MPD[mpd]
+- link:https://codeberg.org/dnkl/foot[foot]
