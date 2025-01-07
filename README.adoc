@@ -6,3 +6,4 @@ This repo contains the config files for the following programs:
 - link:https://github.com/emersion/mako[mako]
 - link:https://github.com/MusicPlayerDaemon/MPD[mpd]
 - link:https://codeberg.org/dnkl/foot[foot]
+- link:https://wiki.archlinux.org/title/Pacman[pacman]
