@@ -1,0 +1,5 @@
+setopt completeinword
+setopt correct
+setopt extendedglob
+setopt extendedhistory
+setopt sharehistory
