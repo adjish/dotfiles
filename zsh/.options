@@ -3,5 +3,9 @@ setopt completeinword
 setopt correct
 setopt extendedglob
 setopt extendedhistory
+setopt hashlistall
+setopt histexpiredupsfirst
 setopt histignorespace
+setopt histlexwords
+setopt incappendhistorytime
 setopt sharehistory
