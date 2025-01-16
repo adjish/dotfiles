@@ -1,0 +1,8 @@
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
+HISTFILE="${XDG_STATE_HOME}/zsh/history"
+HISTSIZE=20000
+SAVEHIST=10000
+PS1=' %B%F{1}%(?..%? )%F{3}%d%f:%F{6}%m%f%# '
