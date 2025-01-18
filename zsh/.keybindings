@@ -5,5 +5,7 @@ bindkey '^[[5~' history-search-backward
 bindkey '^[[6~' history-search-forward
 bindkey '^H' backward-kill-word
 bindkey '5~' kill-word
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
 bindkey -s '^[[1~' '^[[H'
 bindkey -s '^[[4~' '^[[F'
