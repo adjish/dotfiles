@@ -7,6 +7,7 @@ outline-width=0
 corner-radius=8
 padding-bottom=0
 selection-background-corner-radius=2
+selection-background-padding=1
 selection-background=fff
 selection-color=000a
 background-color=000a
