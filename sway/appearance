@@ -1,0 +1,11 @@
+default_border pixel 2
+font JetBrainsMono Nerd Font 10
+gaps inner 4
+smart_borders on
+smart_gaps on
+title_align center
+
+client.focused          #ffffff #ffffff #000000 #ffffff #ffffff
+client.focused_inactive #000000 #000000 #000000 #000000 #000000
+client.unfocused        #000000 #000000 #ffffff #000000 #000000
+client.urgent           #000000 #ff0000 #000000 #ff0000 #ff0000
