@@ -5,6 +5,8 @@ setopt extendedglob
 setopt extendedhistory
 setopt hashlistall
 setopt histexpiredupsfirst
+setopt histfindnodups
+setopt histignoredups
 setopt histignorespace
 setopt histlexwords
 setopt incappendhistorytime
