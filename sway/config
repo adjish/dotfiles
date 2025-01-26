@@ -1,2 +1,3 @@
 include options
+include keybindings
 include appearance
