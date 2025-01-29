@@ -20,3 +20,16 @@ bindsym Mod4+Shift+7 move container to workspace number 7
 bindsym Mod4+Shift+8 move container to workspace number 8
 bindsym Mod4+Shift+9 move container to workspace number 9
 bindsym Mod4+Shift+0 move container to workspace number 10
+
+mode "resize" {
+    bindsym Left resize grow width 20 px
+    bindsym Down resize shrink height 20 px
+    bindsym Up resize grow height 20 px
+    bindsym Right resize shrink width 20 px
+    bindsym Shift+Left resize grow width 5 px
+    bindsym Shift+Down resize shrink height 5 px
+    bindsym Shift+Up resize grow height 5 px
+    bindsym Shift+Right resize shrink width 5 px
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
