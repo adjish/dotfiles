@@ -21,6 +21,35 @@ bindsym Mod4+Shift+8 move container to workspace number 8
 bindsym Mod4+Shift+9 move container to workspace number 9
 bindsym Mod4+Shift+0 move container to workspace number 10
 
+bindsym Mod4+backspace kill
+bindsym Mod4+r mode "resize"
+bindsym Mod4+a focus parent
+bindsym Mod4+h focus left
+bindsym Mod4+j focus down
+bindsym Mod4+k focus up
+bindsym Mod4+l focus right
+bindsym Mod4+Shift+Left move left 5px
+bindsym Mod4+Shift+Down move down 5px
+bindsym Mod4+Shift+Up move up 5px
+bindsym Mod4+Shift+Right move right 5px
+bindsym Mod4+Left move left 100px
+bindsym Mod4+Down move down 100px
+bindsym Mod4+Up move up 100px
+bindsym Mod4+Right move right 100px
+bindsym Mod4+c splith
+bindsym Mod4+v splitv
+bindsym Mod4+f fullscreen toggle
+bindsym Mod4+backslash floating toggle
+bindsym Mod4+s layout stacking
+bindsym Mod4+t layout tabbed
+bindsym Mod4+e layout toggle split
+bindsym Mod4+minus move scratchpad
+bindsym Mod4+Shift+minus scratchpad show
+bindsym Mod4+Shift+Escape exit
+bindsym Mod4+Shift+Backspace reload
+bindsym Mod4+space exec $(tofi-drun)
+bindsym Mod4+Return exec footclient
+
 mode "resize" {
     bindsym Left resize grow width 20 px
     bindsym Down resize shrink height 20 px
