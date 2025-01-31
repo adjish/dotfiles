@@ -1,3 +1,4 @@
 include options
 include keybindings
+include autostart
 include appearance
