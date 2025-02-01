@@ -1,0 +1,13 @@
+bar {
+    position top
+    wrap_scroll yes
+
+    colors {
+        background #000000
+        statusline #ffffff
+        separator #ffffff
+        focused_workspace  #ffffff #000000 #ffffff
+        inactive_workspace #000000 #000000 #ffffff
+        urgent_workspace #000000 #ff0000 #000000
+    }
+}
