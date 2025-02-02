@@ -1,4 +1,5 @@
 bar {
+    status_command while true; do date \'+%H:%M %d/%m/%y\'; done
     position top
     wrap_scroll yes
 

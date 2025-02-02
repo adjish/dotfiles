@@ -8,3 +8,4 @@ This repo contains the config files for the following programs:
 - link:https://codeberg.org/dnkl/foot[foot]
 - link:https://wiki.archlinux.org/title/Pacman[pacman]
 - link:https://www.zsh.org/[zsh]
+- link:https://swaywm.org/[sway]
