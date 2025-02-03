@@ -6,8 +6,9 @@ setopt extendedhistory
 setopt hashlistall
 setopt histexpiredupsfirst
 setopt histfindnodups
-setopt histignoredups
+setopt histignorealldups
 setopt histignorespace
 setopt histlexwords
+setopt histreduceblanks
 setopt incappendhistorytime
 setopt sharehistory
