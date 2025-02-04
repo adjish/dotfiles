@@ -1,6 +1,7 @@
 alias cp='cp -i'
 alias mv='mv -i'
-alias rm='rm -i'
+alias rm='rm -I'
+alias ln='ln -i'
 alias df='df -h'
 alias free='free -h'
 alias du='du -h'
