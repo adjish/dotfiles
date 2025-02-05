@@ -1,4 +1,2 @@
-[ -s .variables ] && source .variables
-[ -s .aliases ] && source .aliases
-[ -s .options ] && source .options
-[ -s .keybindings ] && source .keybindings
+for file ('.variables' '.aliases' '.options' '.keybindings')
+  [ -s "$file" ] && source "$file"

@@ -1,14 +1,15 @@
-setopt autocd
-setopt completeinword
-setopt correct
-setopt extendedglob
-setopt extendedhistory
-setopt hashlistall
-setopt histexpiredupsfirst
-setopt histfindnodups
-setopt histignorealldups
-setopt histignorespace
-setopt histlexwords
-setopt histreduceblanks
-setopt incappendhistorytime
-setopt sharehistory
+setopt \
+  autocd \
+  completeinword \
+  correct \
+  extendedglob \
+  extendedhistory \
+  hashlistall \
+  histexpiredupsfirst \
+  histfindnodups \
+  histignorealldups \
+  histignorespace \
+  histlexwords \
+  histreduceblanks \
+  incappendhistorytime \
+  sharehistory
