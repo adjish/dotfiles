@@ -7,7 +7,9 @@ bindkey \
   '^H' backward-kill-word \
   '5~' kill-word \
   '^[[1;5C' forward-word \
-  '^[[1;5D' backward-word
+  '^[[1;5D' backward-word \
+  '^[ ' autosuggest-accept \
+  '^ ' autosuggest-execute
 
 bindkey -s \
   '^[[1~' '^[[H' \
