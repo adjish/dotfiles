@@ -1,5 +1,5 @@
 bar {
-    status_command while true; do date \'+%H:%M %d/%m/%y\'; done
+    status_command while true; do date \'+%H:%M %a %d/%m/%y\'; done
     position top
     wrap_scroll yes
 

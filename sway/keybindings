@@ -40,9 +40,10 @@ bindsym Mod4+c splith
 bindsym Mod4+v splitv
 bindsym Mod4+f fullscreen toggle
 bindsym Mod4+backslash floating toggle
+bindsym Mod4+Shift+Return focus mode_toggle
 bindsym Mod4+s layout stacking
 bindsym Mod4+t layout tabbed
-bindsym Mod4+e layout toggle split
+bindsym Mod4+e layout toggle all
 bindsym Mod4+minus move scratchpad
 bindsym Mod4+Shift+minus scratchpad show
 bindsym Mod4+Shift+Escape exit
