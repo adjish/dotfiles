@@ -1,5 +1,6 @@
 bar {
-    status_command while true; do date \'+%H:%M %a %d/%m/%y\'; done
+    status_command while true; do ~/.config/sway/status.sh; done
+
     position top
     wrap_scroll yes
 
