@@ -48,8 +48,10 @@ bindsym Mod4+minus move scratchpad
 bindsym Mod4+Shift+minus scratchpad show
 bindsym Mod4+Shift+Escape exit
 bindsym Mod4+Shift+Backspace reload
+
 bindsym Mod4+space exec $(tofi-drun)
 bindsym Mod4+Return exec footclient
+bindsym Mod4+Shift+l exec swaylock -c 000000
 
 mode "resize" {
     bindsym Left resize grow width 20 px
