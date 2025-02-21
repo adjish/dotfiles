@@ -5,7 +5,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 HISTFILE="${XDG_STATE_HOME}/zsh/history"
 HISTSIZE=20000
 SAVEHIST=10000
-PS1=' %B%F{1}%(?..%? )%F{6}%n %F{3}%~%f %# '
+PS1=' %B%F{1}%(?..%? )%F{6}%n%f@%F{5}%m %F{3}%~%f %# '
 
 function preexec() {
   timer=${timer:-$SECONDS}
