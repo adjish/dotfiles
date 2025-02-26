@@ -4,6 +4,7 @@ gaps inner 4
 smart_borders on
 smart_gaps on
 title_align center
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 client.focused          #ffffff #ffffff #000000 #ffffff #ffffff
 client.focused_inactive #000000 #000000 #000000 #000000 #000000
