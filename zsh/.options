@@ -3,6 +3,7 @@ setopt \
   completeinword \
   correct \
   extendedglob \
+  null_glob \
   extendedhistory \
   hashlistall \
   histexpiredupsfirst \
@@ -18,3 +19,4 @@ autoload -Uz +X compinit && compinit
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
+zstyle ':completion:*' special-dirs true
