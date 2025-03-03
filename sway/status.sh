@@ -1,17 +1,14 @@
 #!/bin/sh
 
-volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
-muted=false
+volume="$(wpctl get-volume @DEFAULT_SINK@)"
 
 case "$volume" in
-*'MUTED'*) muted=true ;;
+*'MUTED'*) muted='MUTED ' ;;
 esac
 
 volume="${volume% \[MUTED*}"
-volume=$(echo "${volume#* }*100" | bc)
+volume=$(echo "${volume#* }" | tr -d .)
+volume="${volume#0}"
+volume="${volume#0}"
 
-if [ $muted = true ]; then
-  echo "${volume%.*}"% 'MUTED |' "$(date '+%H:%M %a %d/%m/%y')"
-else
-  echo "${volume%.*}"% '|' "$(date '+%H:%M %a %d/%m/%y')"
-fi
+echo "${volume%.*}% $muted| $(date '+%H:%M %a %d/%m/%y')"
