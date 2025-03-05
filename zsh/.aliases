@@ -10,4 +10,5 @@ alias \
   grep='grep --color=auto' \
   ls='ls -AGlh --color=auto --classify=auto' \
   ip='ip -c=auto' \
-  mkdir='mkdir -p'
+  mkdir='mkdir -p' \
+  ps='ps aux'
