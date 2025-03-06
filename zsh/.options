@@ -13,7 +13,8 @@ setopt \
   histlexwords \
   histreduceblanks \
   incappendhistorytime \
-  sharehistory
+  sharehistory \
+  autopushd
 
 autoload -Uz +X compinit && compinit
 
