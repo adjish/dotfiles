@@ -14,7 +14,8 @@ setopt \
   histreduceblanks \
   incappendhistorytime \
   sharehistory \
-  autopushd
+  autopushd \
+  noclobber
 
 autoload -Uz +X compinit && compinit
 
