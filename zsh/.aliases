@@ -11,4 +11,5 @@ alias \
   ls='ls -AGlh --color=auto --classify=auto' \
   ip='ip -c=auto' \
   mkdir='mkdir -p' \
-  ps='ps aux'
+  ps='ps aux' \
+  less='less -F'
