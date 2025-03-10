@@ -12,4 +12,5 @@ alias \
   ip='ip -c=auto' \
   mkdir='mkdir -p' \
   ps='ps aux' \
-  less='less -F'
+  less='less -F' \
+  dd='dd status=progress'
