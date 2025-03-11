@@ -15,7 +15,8 @@ setopt \
   incappendhistorytime \
   sharehistory \
   autopushd \
-  noclobber
+  noclobber \
+  globdots
 
 autoload -Uz +X compinit && compinit
 
@@ -23,4 +24,5 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-dirs-first true
 zstyle ':completion:*' list-dirs-first true
