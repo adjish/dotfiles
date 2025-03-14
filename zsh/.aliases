@@ -1,5 +1,5 @@
 alias \
-  cp='cp -i' \
+  cp='cp -ir' \
   mv='mv -i' \
   rm='rm -I' \
   ln='ln -i' \
