@@ -16,7 +16,8 @@ setopt \
   sharehistory \
   autopushd \
   noclobber \
-  globdots
+  globdots \
+  chasedots
 
 autoload -Uz +X compinit && compinit
 
