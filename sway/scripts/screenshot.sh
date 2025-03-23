@@ -20,13 +20,26 @@ while [ -e "${save_path}" ]; do
 
 done
 
-grim "${save_path}"
+selection="$(slurp)"
+
+if [ -n "${selection}" ]; then
+  grim -g "${selection}" "${save_path}"
+else
+  grim "${save_path}"
+fi
 
 name="$(tofi -c ~/.config/tofi/dmenu --prompt-text 'Custom filename: ' </dev/null)"
 
 if [ -n "${name}" ]; then
-  mv "${save_path}" "$(dirname "${save_path}")/${name}"
-  save_path="$(dirname "${save_path}")/${name}"
+  case "${name}" in
+  */*)
+    notify-send 'Invalid file name.'
+    ;;
+  *)
+    mv "${save_path}" "$(dirname "${save_path}")/${name}"
+    save_path="$(dirname "${save_path}")/${name}"
+    ;;
+  esac
 fi
 
 answer="$(printf 'No\nYes' | tofi -c ~/.config/tofi/dmenu --prompt-text 'Copy screenshot to clipboard? ')"
