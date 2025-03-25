@@ -1,8 +1,8 @@
 #!/bin/sh
 
-case $(printf "Shutdown\nReboot\nSuspend" | tofi -c ~/.config/tofi/dmenu) in
+case $(printf "Shutdown\nReboot\nSuspend" | tofi -c ~/.config/tofi/dmenu --prompt-text 'Power Menu: ') in
 "Shutdown")
-  exec shutdown -h 0
+  exec shutdown now
   ;;
 "Reboot")
   exec reboot
