@@ -54,6 +54,7 @@ bindsym Mod4+Shift+f exec /usr/lib/firefox/firefox
 bindsym Mod4+Shift+s exec systemctl suspend
 bindsym Mod4+Escape exec ~/.config/sway/scripts/menu.sh
 bindsym Mod4+Print exec ~/.config/sway/scripts/screenshot.sh
+bindsym Mod4+Shift+Print exec ~/.config/sway/scripts/text_from_screenshot.sh
 
 bindsym Mod4+Page_Up exec amixer set Master 1%+
 bindsym Mod4+Shift+Page_Up exec amixer set Master 5%+
