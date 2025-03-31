@@ -17,7 +17,8 @@ setopt \
   autopushd \
   noclobber \
   globdots \
-  chasedots
+  chasedots \
+  hist_beep
 
 autoload -Uz +X compinit && compinit
 
