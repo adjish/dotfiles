@@ -1,27 +1,25 @@
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_STATE_HOME="$HOME/.local/state"
-export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_STATE_HOME="${HOME}/.local/state"
+export XDG_CACHE_HOME="${HOME}/.cache"
 HISTFILE="${XDG_STATE_HOME}/zsh/history"
 HISTSIZE=20000
 SAVEHIST=10000
 PS1=' %B%F{1}%(?..%? )%F{6}%n%f@%F{5}%m %F{3}%~%f %# '
 
 function preexec() {
-  timer=${timer:-$SECONDS}
+  timer=${timer:-${SECONDS}}
 }
 
 function precmd() {
-  if [ $timer ]; then
-    timer_show=$(($SECONDS - $timer))
-
-    if [ "$timer_show" -ne 0 ]
+  if [[ -n "${timer}" ]]; then
+    timer_show=$((SECONDS - timer))
+    if [[ "${timer_show}" -ne 0 ]]
     then
-      export RPROMPT="%F{green}${timer_show}s %{$reset_color%}"
+      export RPROMPT="%F{green}${timer_show}s %{${reset_color}%}"
     else
       export RPROMPT=''
     fi
-
     unset timer
   fi
 }
