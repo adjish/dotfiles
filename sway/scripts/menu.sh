@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case $(printf "Shutdown\nPoweroff\nReboot\nSuspend" | tofi -c ~/.config/tofi/dmenu --prompt-text 'Power Menu: ') in
+case $(printf "Shutdown\nPoweroff\nReboot\nSuspend" | tofi -c ~/.config/tofi/dmenu) in
 "Shutdown")
   exec shutdown now
   ;;
@@ -12,5 +12,8 @@ case $(printf "Shutdown\nPoweroff\nReboot\nSuspend" | tofi -c ~/.config/tofi/dme
   ;;
 "Suspend")
   exec systemctl suspend
+  ;;
+*)
+  exit 1
   ;;
 esac
