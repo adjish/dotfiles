@@ -50,7 +50,7 @@ bindsym Mod4+Shift+Backspace reload
 bindsym Mod4+space exec $(tofi-drun)
 bindsym Mod4+Shift+l exec swaylock -c 000000
 bindsym Mod4+Return exec footclient
-bindsym Mod4+Shift+f exec /usr/lib/firefox/firefox
+bindsym Mod4+Shift+f exec firefox
 bindsym Mod4+Shift+s exec systemctl suspend
 bindsym Mod4+Escape exec ~/.config/sway/scripts/menu.sh
 bindsym Mod4+Print exec ~/.config/sway/scripts/screenshot.sh
