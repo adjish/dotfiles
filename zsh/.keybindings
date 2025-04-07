@@ -9,7 +9,9 @@ bindkey \
   '^[[1;5C' forward-word \
   '^[[1;5D' backward-word \
   '^[ ' autosuggest-accept \
-  '^ ' autosuggest-execute
+  '^ ' autosuggest-execute \
+  '^[[A' history-substring-search-up \
+  '^[[B' history-substring-search-down
 
 bindkey -s \
   '^[[1~' '^[[H' \
