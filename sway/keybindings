@@ -1,76 +1,79 @@
 floating_modifier Mod4
 
-bindsym Mod4+1 workspace number 1
-bindsym Mod4+2 workspace number 2
-bindsym Mod4+3 workspace number 3
-bindsym Mod4+4 workspace number 4
-bindsym Mod4+5 workspace number 5
-bindsym Mod4+6 workspace number 6
-bindsym Mod4+7 workspace number 7
-bindsym Mod4+8 workspace number 8
-bindsym Mod4+9 workspace number 9
-bindsym Mod4+0 workspace number 10
-bindsym Mod4+Shift+1 move container to workspace number 1
-bindsym Mod4+Shift+2 move container to workspace number 2
-bindsym Mod4+Shift+3 move container to workspace number 3
-bindsym Mod4+Shift+4 move container to workspace number 4
-bindsym Mod4+Shift+5 move container to workspace number 5
-bindsym Mod4+Shift+6 move container to workspace number 6
-bindsym Mod4+Shift+7 move container to workspace number 7
-bindsym Mod4+Shift+8 move container to workspace number 8
-bindsym Mod4+Shift+9 move container to workspace number 9
-bindsym Mod4+Shift+0 move container to workspace number 10
-
-bindsym Mod4+backspace kill
-bindsym Mod4+r mode "resize"
-bindsym Mod4+a focus parent
-bindsym Mod4+h focus left
-bindsym Mod4+j focus down
-bindsym Mod4+k focus up
-bindsym Mod4+l focus right
-bindsym Mod4+Shift+Left move left 5px
-bindsym Mod4+Shift+Down move down 5px
-bindsym Mod4+Shift+Up move up 5px
-bindsym Mod4+Shift+Right move right 5px
-bindsym Mod4+Left move left 100px
-bindsym Mod4+Down move down 100px
-bindsym Mod4+Up move up 100px
-bindsym Mod4+Right move right 100px
-bindsym Mod4+c splith
-bindsym Mod4+v splitv
-bindsym Mod4+f fullscreen toggle
-bindsym Mod4+backslash floating toggle
-bindsym Mod4+Shift+Return focus mode_toggle
-bindsym Mod4+e layout toggle all
-bindsym Mod4+minus move scratchpad
-bindsym Mod4+Shift+minus scratchpad show
-bindsym Mod4+Shift+Escape exit
-bindsym Mod4+Shift+Backspace reload
-
-bindsym Mod4+space exec $(tofi-drun)
-bindsym Mod4+Shift+l exec swaylock -c 000000
-bindsym Mod4+Return exec footclient
-bindsym Mod4+Shift+f exec firefox
-bindsym Mod4+Shift+s exec systemctl suspend
-bindsym Mod4+Escape exec ~/.config/sway/scripts/menu.sh
-bindsym Mod4+Print exec ~/.config/sway/scripts/screenshot.sh
-bindsym Mod4+Shift+Print exec ~/.config/sway/scripts/text_from_screenshot.sh
-
-bindsym Mod4+Page_Up exec amixer set Master 1%+
-bindsym Mod4+Shift+Page_Up exec amixer set Master 5%+
-bindsym Mod4+Page_Down exec amixer set Master 1%-
-bindsym Mod4+Shift+Page_Down exec amixer set Master 5%-
-bindsym Mod4+End exec amixer set Master toggle
+bindsym
+{
+    Mod4+1 workspace number 1
+    Mod4+2 workspace number 2
+    Mod4+3 workspace number 3
+    Mod4+4 workspace number 4
+    Mod4+5 workspace number 5
+    Mod4+6 workspace number 6
+    Mod4+7 workspace number 7
+    Mod4+8 workspace number 8
+    Mod4+9 workspace number 9
+    Mod4+0 workspace number 10
+    Mod4+Shift+1 move container to workspace number 1
+    Mod4+Shift+2 move container to workspace number 2
+    Mod4+Shift+3 move container to workspace number 3
+    Mod4+Shift+4 move container to workspace number 4
+    Mod4+Shift+5 move container to workspace number 5
+    Mod4+Shift+6 move container to workspace number 6
+    Mod4+Shift+7 move container to workspace number 7
+    Mod4+Shift+8 move container to workspace number 8
+    Mod4+Shift+9 move container to workspace number 9
+    Mod4+Shift+0 move container to workspace number 10
+    Mod4+backspace kill
+    Mod4+r mode "resize"
+    Mod4+a focus parent
+    Mod4+h focus left
+    Mod4+j focus down
+    Mod4+k focus up
+    Mod4+l focus right
+    Mod4+Shift+Left move left 5px
+    Mod4+Shift+Down move down 5px
+    Mod4+Shift+Up move up 5px
+    Mod4+Shift+Right move right 5px
+    Mod4+Left move left 100px
+    Mod4+Down move down 100px
+    Mod4+Up move up 100px
+    Mod4+Right move right 100px
+    Mod4+c splith
+    Mod4+v splitv
+    Mod4+f fullscreen toggle
+    Mod4+backslash floating toggle
+    Mod4+Shift+Return focus mode_toggle
+    Mod4+e layout toggle all
+    Mod4+minus move scratchpad
+    Mod4+Shift+minus scratchpad show
+    Mod4+Shift+Escape exit
+    Mod4+Shift+Backspace reload
+    Mod4+space exec $(tofi-drun)
+    Mod4+Shift+l exec swaylock -c 000000
+    Mod4+Return exec footclient
+    Mod4+Shift+f exec firefox
+    Mod4+Shift+s exec systemctl suspend
+    Mod4+Escape exec ~/.config/sway/scripts/menu.sh
+    Mod4+Print exec ~/.config/sway/scripts/screenshot.sh
+    Mod4+Shift+Print exec ~/.config/sway/scripts/text_from_screenshot.sh
+    Mod4+Page_Up exec amixer set Master 1%+
+    Mod4+Shift+Page_Up exec amixer set Master 5%+
+    Mod4+Page_Down exec amixer set Master 1%-
+    Mod4+Shift+Page_Down exec amixer set Master 5%-
+    Mod4+End exec amixer set Master toggle
+}
 
 mode "resize" {
-    bindsym Left resize grow width 20 px
-    bindsym Down resize shrink height 20 px
-    bindsym Up resize grow height 20 px
-    bindsym Right resize shrink width 20 px
-    bindsym Shift+Left resize grow width 5 px
-    bindsym Shift+Down resize shrink height 5 px
-    bindsym Shift+Up resize grow height 5 px
-    bindsym Shift+Right resize shrink width 5 px
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+  bindsym
+  {
+    Left resize grow width 20 px
+    Down resize shrink height 20 px
+    Up resize grow height 20 px
+    Right resize shrink width 20 px
+    Shift+Left resize grow width 5 px
+    Shift+Down resize shrink height 5 px
+    Shift+Up resize grow height 5 px
+    Shift+Right resize shrink width 5 px
+    Return mode "default"
+    Escape mode "default"
+  }
 }
