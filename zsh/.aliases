@@ -14,4 +14,5 @@ alias \
   ps='ps aux' \
   less='less -F' \
   dd='dd status=progress' \
-  uptime='uptime --pretty'
+  uptime='uptime --pretty' \
+  wget='wget -c'
