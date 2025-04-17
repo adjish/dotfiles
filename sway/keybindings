@@ -39,8 +39,7 @@ bindsym
     Mod4+Down move down 100px
     Mod4+Up move up 100px
     Mod4+Right move right 100px
-    Mod4+c splith
-    Mod4+v splitv
+    Mod4+v layout toggle split
     Mod4+f fullscreen toggle
     Mod4+backslash floating toggle
     Mod4+Shift+Return focus mode_toggle
