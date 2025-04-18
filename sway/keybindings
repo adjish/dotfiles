@@ -49,7 +49,7 @@ bindsym
     Mod4+Shift+Escape exit
     Mod4+Shift+Backspace reload
     Mod4+Space exec $(tofi-drun)
-    Mod4+Shift+Space exec cd ~/.config/sway/scripts/ && dash $(printf '%s\n' * | tofi)
+    Mod4+Shift+Space exec cd ~/.config/sway/scripts/ && dash "$(printf '%s\n' * | sed 's/\.sh//' | tofi).sh"
     Mod4+Shift+l exec swaylock -c 000000
     Mod4+Return exec footclient
     Mod4+Shift+f exec firefox
