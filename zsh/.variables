@@ -9,6 +9,7 @@ PS1=' %B%F{1}%(?..%? )%F{6}%n%f@%F{5}%m %F{3}%~%f %#%b '
 
 function preexec() {
   timer=${timer:-${SECONDS}}
+  print -Pn "\e]0;$1\a"
 }
 
 function precmd() {
@@ -22,4 +23,6 @@ function precmd() {
     fi
     unset timer
   fi
+
+  print -Pn "\e]0;%n@%m %~\a"
 }
