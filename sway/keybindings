@@ -67,10 +67,10 @@ bindsym
 mode "resize" {
   bindsym
   {
-    Left resize grow width 20 px
-    Down resize shrink height 20 px
-    Up resize grow height 20 px
-    Right resize shrink width 20 px
+    Left resize grow width 100 px
+    Down resize shrink height 100 px
+    Up resize grow height 100 px
+    Right resize shrink width 100 px
     Shift+Left resize grow width 5 px
     Shift+Down resize shrink height 5 px
     Shift+Up resize grow height 5 px
