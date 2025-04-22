@@ -1,3 +1,5 @@
+bindkey -e
+
 bindkey \
   '^[[3~' delete-char \
   '^[[H' beginning-of-line \
