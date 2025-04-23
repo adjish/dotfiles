@@ -23,6 +23,4 @@ function precmd() {
     fi
     unset timer
   fi
-
-  print -Pn "\e]0;%n@%m %~\a"
 }
