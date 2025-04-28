@@ -23,4 +23,6 @@ function precmd() {
     fi
     unset timer
   fi
+
+  print -Pn "\e]0;$(zsh --version)\a"
 }
