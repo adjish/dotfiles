@@ -1,3 +1,7 @@
-#!/bin/zsh
+#!/bin/sh
 
-exec xdg-open ~/Data/"$(cd ~/Data; find * -type f | tofi -c ~/.config/tofi/dmenu)"
+cd ~/Data || exit
+
+file="$(find ./* -type f | sed 's/^.\///' | tofi -c ~/.config/tofi/dmenu)"
+
+exec xdg-open "${file}"
