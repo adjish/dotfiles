@@ -54,6 +54,7 @@ bindsym
     Mod4+Return exec footclient
     Mod4+Shift+f exec firefox
     Mod4+Shift+s exec systemctl suspend
+    Mod4+c exec clapboard
     Mod4+Escape exec ~/.config/sway/scripts/menu.sh
     Mod4+Print exec ~/.config/sway/scripts/screenshot.sh
     Mod4+Shift+Print exec ~/.config/sway/scripts/text_from_screenshot.sh

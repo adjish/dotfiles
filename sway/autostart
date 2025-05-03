@@ -1,2 +1,7 @@
-exec mako
-exec foot -s
+exec
+{
+  mako
+  foot -s
+  conky
+  clapboard --record
+}
