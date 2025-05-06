@@ -10,3 +10,4 @@ This repo contains the config files for the following programs:
 - link:https://www.zsh.org/[zsh]
 - link:https://swaywm.org/[sway]
 - link:https://github.com/brndnmtthws/conky[conky]
+- link:https://mpv.io/[mpv]
