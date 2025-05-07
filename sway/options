@@ -5,3 +5,9 @@ input * xkb_numlock enable
 input * xkb_options compose:menu
 seat * hide_cursor 5000
 seat * hide_cursor when-typing enable
+
+input type:keyboard
+{
+    repeat_delay 200
+    repeat_rate 20
+}
