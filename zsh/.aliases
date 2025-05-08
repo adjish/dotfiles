@@ -15,4 +15,5 @@ alias \
   less='less -F' \
   dd='dd status=progress' \
   uptime='uptime --pretty' \
-  wget='wget -c'
+  wget='wget -c' \
+  diff='diff --color=auto'
