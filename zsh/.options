@@ -18,4 +18,5 @@ setopt \
   noclobber \
   globdots \
   chasedots \
-  hist_beep
+  hist_beep \
+  interactive_comments
