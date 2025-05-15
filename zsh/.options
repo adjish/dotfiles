@@ -3,7 +3,6 @@ setopt \
   completeinword \
   correct \
   extendedglob \
-  null_glob \
   extendedhistory \
   hashlistall \
   histexpiredupsfirst \
