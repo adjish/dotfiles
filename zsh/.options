@@ -19,4 +19,5 @@ setopt \
   chasedots \
   hist_beep \
   interactive_comments \
-  pushdignoredups
+  pushdignoredups \
+  longlistjobs
