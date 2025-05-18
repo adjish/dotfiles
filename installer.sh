@@ -15,3 +15,5 @@ then
 else
   echo pacman: program not found!
 fi
+
+echo 'export ZDOTDIR="${HOME}"/.config/zsh' >> ~/.zshenv
