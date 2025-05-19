@@ -3,7 +3,7 @@ alias \
   mv='mv -i' \
   rm='rm -I' \
   ln='ln -i' \
-  df='df -h' \
+  df='df -hT' \
   free='free -h' \
   du='du -h' \
   tree='tree -C' \
