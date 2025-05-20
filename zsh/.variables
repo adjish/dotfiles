@@ -6,6 +6,7 @@ HISTFILE="${XDG_STATE_HOME}/zsh/history"
 HISTSIZE=20000
 SAVEHIST=10000
 PS1=' %B%F{1}%(?..%? )%F{6}%n%f@%F{5}%m %F{3}%~%f %#%b '
+PATH+="${HOME}/.local/bin"
 
 function preexec() {
   timer=${timer:-${SECONDS}}
