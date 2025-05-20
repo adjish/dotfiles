@@ -1,4 +1,8 @@
-for file in .variables .aliases .options .keybindings \
+for file in \
+  ~/.config/zsh/.variables \
+  ~/.config/zsh/.aliases \
+  ~/.config/zsh/.options \
+  ~/.config/zsh/.keybindings \
   /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh \
   /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh \
   /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh \
