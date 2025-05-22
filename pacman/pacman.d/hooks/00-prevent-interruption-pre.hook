@@ -7,5 +7,5 @@ Target = *
 
 [Action]
 When = PreTransaction
-Exec = /usr/bin/systemctl --runtime mask halt.target poweroff.target reboot.target kexec.target suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target sleep.target
+Exec = /bin/sh /etc/pacman.d/hooks/mask.sh
 Depends = systemd
