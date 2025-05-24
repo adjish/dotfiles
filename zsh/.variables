@@ -8,9 +8,10 @@ SAVEHIST=10000
 PS1=' %B%F{1}%(?..%? )%F{6}%n%f@%F{5}%m %F{3}%~%f %#%b '
 PATH+="${HOME}/.local/bin"
 
-export EDITOR=nvim
-export VISUAL=nvim
-export PAGER=less
+export EDITOR=nvim \
+       VISUAL=nvim \
+       PAGER=less \
+       BROWSER=firefox
 
 function preexec() {
   timer=${timer:-${SECONDS}}
