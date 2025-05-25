@@ -1,3 +1,5 @@
+killall clapboard
+
 pidof -q sway
 
 if [[ ! -a /tmp/sway && $? -ne 0 ]];
