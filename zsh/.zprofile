@@ -1,8 +1,6 @@
-killall clapboard
+pidof -q clapboard && killall clapboard
 
-pidof -q sway
-
-if [[ ! -a /tmp/sway && $? -ne 0 ]];
+if [ ! -e /tmp/sway ] && ! pidof -q sway;
 then
    exec sway > /tmp/sway
 fi
