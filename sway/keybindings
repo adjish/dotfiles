@@ -78,5 +78,6 @@ mode "resize" {
     Shift+Right resize shrink width 5 px
     Return mode "default"
     Escape mode "default"
+    Mod4+r mode "default"
   }
 }
