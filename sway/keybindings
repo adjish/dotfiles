@@ -58,6 +58,7 @@ bindsym
     Mod4+Escape exec ~/.config/sway/scripts/menu.sh
     Mod4+Print exec ~/.config/sway/scripts/quick_screenshot.sh
     Mod4+Shift+Print exec ~/.config/sway/scripts/screenshot.sh
+    Mod4+g exec ~/.config/sway/scripts/toggle_gaps.sh
     Mod4+Page_Up exec amixer set Master 1%+
     Mod4+Shift+Page_Up exec amixer set Master 5%+
     Mod4+Page_Down exec amixer set Master 1%-
