@@ -11,7 +11,7 @@ fi
 if [ "${state}" -eq 1 ]; then
     swaymsg gaps inner all set 0
 else
-    swaymsg gaps inner all set 10
+    swaymsg gaps inner all set 4
 fi
 
 echo $((1 - state)) > "${STATE_FILE}"
