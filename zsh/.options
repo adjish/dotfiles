@@ -20,4 +20,5 @@ setopt \
   hist_beep \
   interactive_comments \
   pushdignoredups \
-  longlistjobs
+  longlistjobs \
+  autoparamkeys
