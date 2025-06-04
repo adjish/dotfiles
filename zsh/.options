@@ -21,4 +21,5 @@ setopt \
   interactive_comments \
   pushdignoredups \
   longlistjobs \
-  autoparamkeys
+  autoparamkeys \
+  pushdsilent
