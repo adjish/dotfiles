@@ -8,7 +8,7 @@ alias \
   du='du -h' \
   tree='tree -C' \
   grep='grep --color=auto' \
-  ls='ls -AGlh --color=auto --classify=auto' \
+  ls='ls -AGlht --color=auto --classify=auto' \
   ip='ip -c=auto' \
   mkdir='mkdir -p' \
   ps='ps aux' \
