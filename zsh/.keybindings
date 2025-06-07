@@ -13,7 +13,8 @@ bindkey \
   '^[ ' autosuggest-accept \
   '^ ' autosuggest-execute \
   '^[[A' history-substring-search-up \
-  '^[[B' history-substring-search-down
+  '^[[B' history-substring-search-down \
+  '^[[2~' overwrite-mode
 
 bindkey -s \
   '^[[1~' '^[[H' \
