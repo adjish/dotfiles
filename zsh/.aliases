@@ -17,4 +17,5 @@ alias \
   uptime='uptime --pretty' \
   wget='wget -c' \
   diff='diff --color=auto -r' \
-  history='history 1'
+  history='history 1' \
+  less='less -i'
