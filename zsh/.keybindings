@@ -14,7 +14,8 @@ bindkey \
   '^ ' autosuggest-execute \
   '^[[A' history-substring-search-up \
   '^[[B' history-substring-search-down \
-  '^[[2~' overwrite-mode
+  '^[[2~' overwrite-mode \
+  '^ ' set-mark-command
 
 bindkey -s \
   '^[[1~' '^[[H' \
