@@ -20,4 +20,8 @@ fi
 datetime="$(date '+%H:%M %a %d/%m/%y')"
 network="$(ip route get 1.1.1.1 | grep -Po '(?<=dev\s)\w+' | cut -f1 -d ' ')"
 
+if [ -z "${network}" ]; then
+  network="Disconnected"
+fi
+
 echo "${network}" \| "${volume}" \| "${datetime}"
