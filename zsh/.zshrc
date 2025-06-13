@@ -3,6 +3,7 @@ for file in \
   ~/.config/zsh/.aliases \
   ~/.config/zsh/.options \
   ~/.config/zsh/.keybindings \
+  ~/.config/zsh/.functions \
   /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh \
   /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh \
   /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh \

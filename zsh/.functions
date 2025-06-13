@@ -1,0 +1,9 @@
+function up()
+{
+  directory=''
+
+  repeat "$1"
+    directory="../$directory"
+
+  cd "$directory"
+}
