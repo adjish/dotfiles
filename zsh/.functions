@@ -7,3 +7,8 @@ function up()
 
   cd "$directory"
 }
+
+function custom_cd ()
+{
+  \cd "$@" || { [ "$?" -eq 1 ] && \cd $(dirname "$1") } 
+}

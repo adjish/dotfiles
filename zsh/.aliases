@@ -18,4 +18,5 @@ alias \
   wget='wget -c' \
   diff='diff --color=auto -r' \
   history='history 1' \
-  less='less -i'
+  less='less -i' \
+  cd=custom_cd
