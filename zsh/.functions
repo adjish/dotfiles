@@ -1,4 +1,4 @@
-function up()
+up()
 {
   directory=''
 
@@ -8,7 +8,14 @@ function up()
   cd "$directory"
 }
 
-function custom_cd ()
+custom_cd()
 {
   \cd "$@" || { [ "$?" -eq 1 ] && \cd $(dirname "$1") } 
+}
+
+dirrm()
+{
+  parent_dir=${$(realpath $1)%/*}
+  mv "$1"/.* -t "$parent_dir"
+  mv "$1"/* -t "$parent_dir" && rmdir "$1"
 }
