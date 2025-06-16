@@ -11,7 +11,8 @@ PATH+="${HOME}/.local/bin"
 export EDITOR=nvim \
        VISUAL=nvim \
        PAGER=less \
-       BROWSER=firefox
+       BROWSER=firefox \
+       MANPAGER='nvim +Man!'
 
 function preexec() {
   timer=${timer:-${SECONDS}}
