@@ -2,8 +2,13 @@ up()
 {
   directory=''
 
-  repeat "$1"
-    directory="../$directory"
+  if [[ "$#" == 0 ]]
+  then
+    directory=".."
+  else
+    repeat "$1"
+      directory="../$directory"
+  fi
 
   cd "$directory"
 }
