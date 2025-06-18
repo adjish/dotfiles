@@ -11,3 +11,4 @@ This repo contains the config files for the following programs:
 - link:https://swaywm.org/[sway]
 - link:https://github.com/brndnmtthws/conky[conky]
 - link:https://mpv.io/[mpv]
+- link:https://newsboat.org/index.html[newsboat]
