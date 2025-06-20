@@ -5,7 +5,7 @@ alias \
   ln='ln -i' \
   df='df -hT' \
   free='free -h' \
-  du='du -h' \
+  du='du -h --time' \
   tree='tree -C' \
   grep='grep --color=auto' \
   ls='ls -AGlht --color=auto --classify=auto' \
