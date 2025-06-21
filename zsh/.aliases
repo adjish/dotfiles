@@ -4,7 +4,7 @@ alias \
   rm='rm -I' \
   ln='ln -i' \
   df='df -hT' \
-  free='free -h' \
+  free='free -hw' \
   du='du -h --time' \
   tree='tree -C' \
   grep='grep --color=auto' \
