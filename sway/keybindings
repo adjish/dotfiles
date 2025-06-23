@@ -41,7 +41,8 @@ bindsym
     Mod4+Right move right 100px
     Mod4+v layout toggle split
     Mod4+f fullscreen toggle
-    Mod4+backslash floating toggle
+    Mod4+Backslash floating toggle
+    Mod4+Shift+Backslash sticky toggle
     Mod4+Shift+Return focus mode_toggle
     Mod4+e layout toggle all
     Mod4+minus move scratchpad
