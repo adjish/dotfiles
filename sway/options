@@ -1,5 +1,6 @@
 workspace_auto_back_and_forth yes
 focus_on_window_activation smart
+floating_minimum_size 1 x 1
 
 input * xkb_numlock enable
 input * xkb_options compose:menu
