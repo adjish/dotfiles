@@ -22,4 +22,5 @@ setopt \
   pushdignoredups \
   longlistjobs \
   autoparamkeys \
-  pushdsilent
+  pushdsilent \
+  histverify
