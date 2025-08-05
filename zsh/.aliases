@@ -20,4 +20,5 @@ alias \
   history='history 1' \
   less='less -i' \
   cd=custom_cd \
-  uname='uname -a'
+  uname='uname -a' \
+  lsblk='lsblk -A'
