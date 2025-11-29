@@ -3,7 +3,6 @@ bar {
 
     position top
     wrap_scroll yes
-    mode hide
 
     colors {
         background #000000
