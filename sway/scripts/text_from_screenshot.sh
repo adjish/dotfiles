@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 geometry="$(slurp)"
 screenshot="$(mktemp screenshot_XXX.png)"
