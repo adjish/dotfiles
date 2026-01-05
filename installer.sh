@@ -1,7 +1,8 @@
 #!/bin/sh
 
-for directory in conky foot mako mpd sway tofi zsh; do
-  if command -v "${directory}" >/dev/null 2>&1;
+for directory in conky foot mako mpd sway tofi zsh
+do
+  if command -v "${directory}" >/dev/null 2>&1
   then
     cp -ri "${directory}" ~/.config/
   else
@@ -13,7 +14,7 @@ if command -v pacman >/dev/null 2>&1
 then
   if command -v sudo >/dev/null 2>&1
   then
-    sudo cp -i pacman/pacman.conf /etc/pacman.conf && sudo cp -ri pacman/pacman.d /etc/;
+    sudo cp -i pacman/pacman.conf /etc/pacman.conf && sudo cp -ri pacman/pacman.d /etc/
   else
     echo sudo: program not found!
   fi
