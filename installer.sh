@@ -28,3 +28,5 @@ if command -v yay >/dev/null 2>&1
 then
   yay --save --answerdiff None --answerclean None --version > /dev/null
 fi
+
+mkdir -pv "${HOME}/Pictures/Screenshots"
