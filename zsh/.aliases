@@ -21,4 +21,5 @@ alias \
   less='less -i' \
   cd=custom_cd \
   uname='uname -a' \
-  lsblk='lsblk -A'
+  lsblk='lsblk -A' \
+  killall='killall -v'
