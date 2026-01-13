@@ -1,5 +1,5 @@
 bar {
-    status_command while true; do ~/.config/sway/scripts/status.sh; done
+    status_command while ~/.config/sway/scripts/status.sh; do sleep 0.1; done
 
     position top
     wrap_scroll yes
