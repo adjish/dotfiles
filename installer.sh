@@ -12,11 +12,16 @@ done
 
 if command -v pacman >/dev/null 2>&1
 then
-  if command -v sudo >/dev/null 2>&1
+  if [ "$(id -u)" -ne 0 ]
   then
-    sudo cp -i pacman/pacman.conf /etc/pacman.conf && sudo cp -ri pacman/pacman.d /etc/
+    if command -v sudo >/dev/null 2>&1
+    then
+      sudo cp -i pacman/pacman.conf /etc/pacman.conf && sudo cp -ri pacman/pacman.d /etc/
+    else
+      echo sudo: program not found!
+    fi
   else
-    echo sudo: program not found!
+    cp -i pacman/pacman.conf /etc/pacman.conf && cp -ri pacman/pacman.d /etc/
   fi
 else
   echo pacman: program not found!
