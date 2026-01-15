@@ -27,7 +27,10 @@ else
   echo pacman: program not found!
 fi
 
-echo 'export ZDOTDIR="${HOME}"/.config/zsh' >> ~/.zshenv
+if [ "$(tail -1 ~/.zshenv)" != 'export ZDOTDIR="${HOME}"/.config/zsh' ]
+then
+  echo 'export ZDOTDIR="${HOME}"/.config/zsh' >> ~/.zshenv
+fi
 
 if command -v yay >/dev/null 2>&1
 then
