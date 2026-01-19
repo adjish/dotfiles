@@ -13,11 +13,13 @@ done
 
 if [ -n "${missing_programs}" ]
 then
-  while printf 'Install missing programs with pacman? [y/n]: '; do
+  printf "\n"
+
+  while printf 'Install missing programs with pacman? [Y/n]: '; do
     read -r ans || exit 1
 
-    case $ans in
-      [Yy]|[Yy][Ee][Ss])
+    case "${ans}" in
+      ""|[Yy]|[Yy][Ee][Ss])
 
         if command -v pacman >/dev/null 2>&1
         then
@@ -46,9 +48,11 @@ then
         ;;
     esac
   done
+
+  printf "\n"
 fi
 
-echo 'Installing config files...'
+printf 'Installing config files...\n'
 
 for directory in conky foot mako mpd sway tofi zsh
 do
