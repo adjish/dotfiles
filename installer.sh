@@ -60,7 +60,13 @@ do
   then
     cp -ri "${directory}" ~/.config/
   else
-    echo "${directory}: program not found!"
+    case "${missing_programs}" in
+      *"${directory}"*)
+        ;;
+      *)
+        echo "${directory}: program not found!"
+        ;;
+    esac
   fi
 done
 
