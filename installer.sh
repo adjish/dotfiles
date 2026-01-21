@@ -13,13 +13,12 @@ done
 
 if [ -n "${missing_programs}" ]
 then
-  printf "\n"
 
-  while printf 'Install missing programs with pacman? [Y/n]: '; do
+  while printf '\nInstall missing programs with pacman? [Y/n]: '; do
     read -r ans || exit 1
 
     case "${ans}" in
-      ""|[Yy]|[Yy][Ee][Ss])
+      ''|[Yy]|[Yy][Ee][Ss])
 
         if command -v pacman >/dev/null 2>&1
         then
