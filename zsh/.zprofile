@@ -1,4 +1,4 @@
-killall clapboard 2> /dev/null
+killall -u "${USER}" clapboard 2> /dev/null
 
 if [ ! -e /tmp/sway ] && ! pidof -q sway;
 then
