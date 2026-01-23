@@ -14,14 +14,14 @@ done
 if [ -n "${missing_programs}" ]
 then
 
-  while printf '\nInstall missing programs with pacman? [Y/n]: '; do
-    read -r ans || exit 1
+  if command -v pacman >/dev/null 2>&1
+  then
+    while printf '\nInstall missing programs with pacman? [Y/n]: '; do
+      read -r ans || exit 1
 
-    case "${ans}" in
-      ''|[Yy]|[Yy][Ee][Ss])
+      case "${ans}" in
+        ''|[Yy]|[Yy][Ee][Ss])
 
-        if command -v pacman >/dev/null 2>&1
-        then
           if [ "$(id -u)" -ne 0 ]
           then
             if command -v sudo >/dev/null 2>&1
@@ -31,24 +31,24 @@ then
               echo 'sudo: program not found!'
             fi
           else
-            pacman --noconfirm -S --needed ${missing_programs}
+            echo 'pacman: program not found!'
           fi
-        else
-          echo 'pacman: program not found!'
-        fi
 
-        break
-        ;;
-      [Nn]|[Nn][Oo])
-        break
-        ;;
-      *)
-        echo 'Please answer y or n.'
-        ;;
-    esac
-  done
+          break
+          ;;
+        [Nn]|[Nn][Oo])
+          break
+          ;;
+        *)
+          echo 'Please answer y or n.'
+          ;;
+      esac
+    done
 
-  printf "\n"
+    printf "\n"
+  else
+    pacman --noconfirm -S --needed ${missing_programs}
+  fi
 fi
 
 printf 'Installing config files...\n'
