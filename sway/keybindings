@@ -1,80 +1,91 @@
-floating_modifier Mod4
+set $mod Mod4
+
+floating_modifier $mod
 
 bindsym
 {
-    Mod4+1 workspace number 1
-    Mod4+2 workspace number 2
-    Mod4+3 workspace number 3
-    Mod4+4 workspace number 4
-    Mod4+5 workspace number 5
-    Mod4+6 workspace number 6
-    Mod4+7 workspace number 7
-    Mod4+8 workspace number 8
-    Mod4+9 workspace number 9
-    Mod4+0 workspace number 10
-    Mod4+Ctrl+1 move container to workspace number 1
-    Mod4+Ctrl+2 move container to workspace number 2
-    Mod4+Ctrl+3 move container to workspace number 3
-    Mod4+Ctrl+4 move container to workspace number 4
-    Mod4+Ctrl+5 move container to workspace number 5
-    Mod4+Ctrl+6 move container to workspace number 6
-    Mod4+Ctrl+7 move container to workspace number 7
-    Mod4+Ctrl+8 move container to workspace number 8
-    Mod4+Ctrl+9 move container to workspace number 9
-    Mod4+Ctrl+0 move container to workspace number 10
-    Mod4+Shift+1 move container to workspace number 1
-    Mod4+Shift+2 move container to workspace number 2
-    Mod4+Shift+3 move container to workspace number 3
-    Mod4+Shift+4 move container to workspace number 4
-    Mod4+Shift+5 move container to workspace number 5
-    Mod4+Shift+6 move container to workspace number 6
-    Mod4+Shift+7 move container to workspace number 7
-    Mod4+Shift+8 move container to workspace number 8
-    Mod4+Shift+9 move container to workspace number 9
-    Mod4+Shift+0 move container to workspace number 10
-    Mod4+Tab workspace next
-    Mod4+Shift+Tab workspace prev
-    Mod4+Backspace kill
-    Mod4+r mode "resize"
-    Mod4+a focus parent
-    Mod4+h focus left
-    Mod4+j focus down
-    Mod4+k focus up
-    Mod4+l focus right
-    Mod4+Shift+Left move left 5px
-    Mod4+Shift+Down move down 5px
-    Mod4+Shift+Up move up 5px
-    Mod4+Shift+Right move right 5px
-    Mod4+Left move left 100px
-    Mod4+Down move down 100px
-    Mod4+Up move up 100px
-    Mod4+Right move right 100px
-    Mod4+v layout toggle split
-    Mod4+f fullscreen toggle
-    Mod4+Backslash floating toggle
-    Mod4+Shift+Backslash sticky toggle
-    Mod4+Shift+Return focus mode_toggle
-    Mod4+e layout toggle all
-    Mod4+minus move scratchpad
-    Mod4+Shift+minus scratchpad show
-    Mod4+Shift+Escape exit
-    Mod4+Shift+Backspace reload
-    Mod4+Space exec $(tofi-drun)
-    Mod4+Shift+Space exec cd ~/.config/sway/scripts/ && dash $(echo "$(printf '%s\n' * | sed 's/\.sh//' | tr '_' ' ' | tofi -c ~/.config/tofi/dmenu).sh" | tr ' ' '_')
-    Mod4+Shift+l exec swaylock -c 000000
-    Mod4+Return exec footclient
-    Mod4+Shift+f exec firefox
-    Mod4+Shift+s exec systemctl suspend
-    Mod4+c exec clapboard
-    Mod4+Escape exec ~/.config/sway/scripts/menu.sh
-    Mod4+Print exec ~/.config/sway/scripts/quick_screenshot.sh
-    Mod4+Shift+Print exec ~/.config/sway/scripts/screenshot.sh
-    Mod4+g exec ~/.config/sway/scripts/toggle_gaps.sh
-    Mod4+Page_Up exec amixer set Master 1%+
-    Mod4+Shift+Page_Up exec amixer set Master 5%+
-    Mod4+Page_Down exec amixer set Master 1%-
-    Mod4+Shift+Page_Down exec amixer set Master 5%-
-    Mod4+End exec amixer set Master toggle
+    $mod+1 workspace number 1
+    $mod+2 workspace number 2
+    $mod+3 workspace number 3
+    $mod+4 workspace number 4
+    $mod+5 workspace number 5
+    $mod+6 workspace number 6
+    $mod+7 workspace number 7
+    $mod+8 workspace number 8
+    $mod+9 workspace number 9
+    $mod+0 workspace number 10
+
+    $mod+Ctrl+1 move container to workspace number 1
+    $mod+Ctrl+2 move container to workspace number 2
+    $mod+Ctrl+3 move container to workspace number 3
+    $mod+Ctrl+4 move container to workspace number 4
+    $mod+Ctrl+5 move container to workspace number 5
+    $mod+Ctrl+6 move container to workspace number 6
+    $mod+Ctrl+7 move container to workspace number 7
+    $mod+Ctrl+8 move container to workspace number 8
+    $mod+Ctrl+9 move container to workspace number 9
+    $mod+Ctrl+0 move container to workspace number 10
+
+    $mod+Shift+1 move container to workspace number 1
+    $mod+Shift+2 move container to workspace number 2
+    $mod+Shift+3 move container to workspace number 3
+    $mod+Shift+4 move container to workspace number 4
+    $mod+Shift+5 move container to workspace number 5
+    $mod+Shift+6 move container to workspace number 6
+    $mod+Shift+7 move container to workspace number 7
+    $mod+Shift+8 move container to workspace number 8
+    $mod+Shift+9 move container to workspace number 9
+    $mod+Shift+0 move container to workspace number 10
+
+    $mod+Tab workspace next
+    $mod+Shift+Tab workspace prev
+    $mod+Backspace kill
+    $mod+r mode "resize"
+    $mod+a focus parent
+    $mod+h focus left
+    $mod+j focus down
+    $mod+k focus up
+    $mod+l focus right
+
+    $mod+Shift+Left move left 5px
+    $mod+Shift+Down move down 5px
+    $mod+Shift+Up move up 5px
+    $mod+Shift+Right move right 5px
+
+    $mod+Left move left 100px
+    $mod+Down move down 100px
+    $mod+Up move up 100px
+    $mod+Right move right 100px
+
+    $mod+v layout toggle split
+    $mod+f fullscreen toggle
+    $mod+Backslash floating toggle
+    $mod+Shift+Backslash sticky toggle
+    $mod+Shift+Return focus mode_toggle
+    $mod+e layout toggle all
+
+    $mod+minus move scratchpad
+    $mod+Shift+minus scratchpad show
+
+    $mod+Shift+Escape exit
+    $mod+Shift+Backspace reload
+
+    $mod+Space exec $(tofi-drun)
+    $mod+Shift+Space exec cd ~/.config/sway/scripts/ && sh $(echo "$(printf '%s\n' * | sed 's/\.sh//' | tr '_' ' ' | tofi -c ~/.config/tofi/dmenu).sh" | tr ' ' '_')
+    $mod+Shift+l exec swaylock -c 000000
+    $mod+Return exec footclient
+    $mod+Shift+f exec firefox
+    $mod+Shift+s exec systemctl suspend
+    $mod+c exec clapboard
+    $mod+Escape exec ~/.config/sway/scripts/menu.sh
+    $mod+Print exec ~/.config/sway/scripts/quick_screenshot.sh
+    $mod+Shift+Print exec ~/.config/sway/scripts/screenshot.sh
+    $mod+g exec ~/.config/sway/scripts/toggle_gaps.sh
+    $mod+Page_Up exec amixer set Master 1%+
+    $mod+Shift+Page_Up exec amixer set Master 5%+
+    $mod+Page_Down exec amixer set Master 1%-
+    $mod+Shift+Page_Down exec amixer set Master 5%-
+    $mod+End exec amixer set Master toggle
 }
 
 mode "resize" {
@@ -90,6 +101,6 @@ mode "resize" {
     Shift+Right resize shrink width 5 px
     Return mode "default"
     Escape mode "default"
-    Mod4+r mode "default"
+    $mod+r mode "default"
   }
 }
