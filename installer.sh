@@ -31,7 +31,7 @@ then
               echo 'sudo: program not found!'
             fi
           else
-            echo 'pacman: program not found!'
+            pacman --noconfirm -S --needed ${missing_programs}
           fi
 
           break
@@ -47,7 +47,7 @@ then
 
     printf "\n"
   else
-    pacman --noconfirm -S --needed ${missing_programs}
+    echo 'pacman: program not found!'
   fi
 fi
 
