@@ -13,13 +13,12 @@ done
 
 if [ -n "${missing_programs}" ]
 then
-
   if command -v pacman >/dev/null 2>&1
   then
     while printf '\nInstall missing programs with pacman? [Y/n]: '; do
-      read -r ans || exit 1
+      read -r answer || exit 1
 
-      case "${ans}" in
+      case "${answer}" in
         ''|[Yy]|[Yy][Ee][Ss])
 
           if [ "$(id -u)" -ne 0 ]
@@ -40,15 +39,15 @@ then
           break
           ;;
         *)
-          echo 'Please answer y or n.'
+          echo 'Please answer "y" or "n".'
           ;;
       esac
     done
-
-    printf "\n"
   else
     echo 'pacman: program not found!'
   fi
+
+  printf '\n'
 fi
 
 printf 'Installing config files...\n'
