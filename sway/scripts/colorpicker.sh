@@ -2,7 +2,7 @@
 
 color="$(grim -g "$(slurp -p -b '#00000000')" -t ppm - | magick - txt: | awk 'NR == 2 {print $3}')"
 
-notify-send "Color" "${color}"
+notify-send 'Color code:' "${color}"
 
 answer="$(printf 'No\nYes' | tofi -c ~/.config/tofi/dmenu --prompt-text 'Copy color to clipboard? ')"
 
