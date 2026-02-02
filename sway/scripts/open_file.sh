@@ -2,7 +2,7 @@
 
 cd ~/Data || exit
 
-file="$(find ./* -type f | sed 's/^.\///' | tofi -c ~/.config/tofi/dmenu)"
+file="$(find ./* -type f | cut -c 3- | tofi -c ~/.config/tofi/dmenu)"
 
 if [ -e "${file}" ]
 then
