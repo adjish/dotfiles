@@ -14,4 +14,4 @@ else
     swaymsg gaps inner all set 4
 fi
 
-echo $((1 - state)) > "${STATE_FILE}"
+echo "$((1 - state))" > "${STATE_FILE}"
