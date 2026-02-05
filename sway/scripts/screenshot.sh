@@ -8,7 +8,7 @@ while [ -e "${save_path}" ]; do
 
   case "${save_path}" in
   *_*)
-    number=$((${save_path#*_} + 1))
+    number="$((${save_path#*_} + 1))"
     save_path="Screenshot_${save_path%_*}_${number}.png"
     ;;
   *)
