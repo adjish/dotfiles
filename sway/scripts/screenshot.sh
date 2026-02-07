@@ -31,7 +31,7 @@ name="$(tofi -c ~/.config/tofi/dmenu --prompt-text 'Custom filename: ' </dev/nul
 if [ -n "${name}" ] && [ ! -e "$(dirname "${save_path}")/${name}" ]; then
   case "${name}" in
   */*)
-    notify-send 'Invalid filename.' 'Using default filename.'
+    notify-send 'Invalid filename.' "Using default filename:\n${save_path##*/}"
     ;;
   *)
     mv "${save_path}" "$(dirname "${save_path}")/${name}"
