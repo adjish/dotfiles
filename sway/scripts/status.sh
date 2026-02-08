@@ -3,8 +3,8 @@
 volume="$(wpctl get-volume @DEFAULT_SINK@)"
 
 case "${volume}" in
-*'MUTED'*) muted='true' ;;
-*) ;;
+  *'MUTED'*) muted='true' ;;
+  *) ;;
 esac
 
 volume="${volume% \[MUTED*}"
