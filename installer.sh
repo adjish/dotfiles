@@ -4,7 +4,7 @@ missing_programs=""
 
 for program in conky foot mako mpd sway zsh
 do
-  if ! command -v "${program}" >/dev/null 2>&1
+  if ! command -v "${program}" > /dev/null 2>&1
   then
     missing_programs="${missing_programs} ${program}"
     echo "${program}: program not found!"
@@ -13,9 +13,9 @@ done
 
 if [ -n "${missing_programs}" ]
 then
-  if command -v pacman >/dev/null 2>&1
+  if command -v pacman > /dev/null 2>&1
   then
-    if [ "$(id -u)" -eq 0 ] || command -v sudo >/dev/null 2>&1
+    if [ "$(id -u)" -eq 0 ] || command -v sudo > /dev/null 2>&1
     then
       while printf '\nInstall missing programs with pacman? [Y/n]: '; do
         read -r answer || exit 1
@@ -54,7 +54,7 @@ printf 'Installing config files...\n'
 
 for directory in conky foot mako mpd sway tofi zsh
 do
-  if command -v "${directory}" >/dev/null 2>&1
+  if command -v "${directory}" > /dev/null 2>&1
   then
     cp -ri "${directory}" ~/.config/
   else
@@ -68,11 +68,11 @@ do
   fi
 done
 
-if command -v pacman >/dev/null 2>&1
+if command -v pacman > /dev/null 2>&1
 then
   if [ "$(id -u)" -ne 0 ]
   then
-    if command -v sudo >/dev/null 2>&1
+    if command -v sudo > /dev/null 2>&1
     then
       sudo cp -i pacman/pacman.conf /etc/pacman.conf && sudo cp -ri pacman/pacman.d /etc/
     else
@@ -90,7 +90,7 @@ then
   echo 'export ZDOTDIR="${HOME}"/.config/zsh' >> ~/.zshenv
 fi
 
-if command -v yay >/dev/null 2>&1
+if command -v yay > /dev/null 2>&1
 then
   yay --save --answerdiff None --answerclean None --version > /dev/null
 fi
