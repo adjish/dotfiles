@@ -14,7 +14,9 @@ bindkey \
   '^ ' autosuggest-execute \
   '^[[A' history-substring-search-up \
   '^[[B' history-substring-search-down \
-  '^[[2~' overwrite-mode
+  '^[[2~' overwrite-mode \
+  '^U' backward-kill-line \
+  '^[k' kill-whole-line
 
 bindkey -s \
   '^[[1~' '^[[H' \
