@@ -85,9 +85,11 @@ else
   echo 'pacman: program not found!'
 fi
 
-if [ "$(tail -1 ~/.zshenv)" != 'export ZDOTDIR="${HOME}"/.config/zsh' ]
+zshenv_line='export ZDOTDIR="${HOME}"/.config/zsh'
+
+if ! grep -qxF -- "$zshenv_line" "${HOME}/.zshenv" 2>/dev/null
 then
-  echo 'export ZDOTDIR="${HOME}"/.config/zsh' >> ~/.zshenv
+  printf '%s\n' "$zshenv_line" >>"${HOME}/.zshenv"
 fi
 
 if command -v yay > /dev/null 2>&1
