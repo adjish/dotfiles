@@ -52,6 +52,8 @@ fi
 
 printf 'Installing config files...\n'
 
+mkdir -p "${HOME}/.config"
+
 for directory in conky foot mako mpd sway tofi zsh
 do
   if command -v "${directory}" > /dev/null 2>&1
