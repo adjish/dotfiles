@@ -1,5 +1,18 @@
 #!/bin/sh
 
+run_as_root() {
+  if [ "$(id -u)" -eq 0 ]
+  then
+    "$@"
+  elif command -v sudo > /dev/null 2>&1
+  then
+    sudo "$@"
+  else
+    echo 'sudo: program not found!' >&2
+    return 1
+  fi
+}
+
 missing_programs=""
 
 for program in conky foot mako mpd sway zsh
@@ -15,34 +28,22 @@ if [ -n "${missing_programs}" ]
 then
   if command -v pacman > /dev/null 2>&1
   then
-    if [ "$(id -u)" -eq 0 ] || command -v sudo > /dev/null 2>&1
-    then
-      while printf '\nInstall missing programs with pacman? [Y/n]: '; do
-        read -r answer || exit 1
+    while printf '\nInstall missing programs with pacman? [Y/n]: '; do
+      read -r answer || exit 1
 
-        case "${answer}" in
-          ''|[Yy]|[Yy][Ee][Ss])
-
-            if [ "$(id -u)" -ne 0 ]
-            then
-              sudo pacman --noconfirm -S --needed ${missing_programs}
-            else
-              pacman --noconfirm -S --needed ${missing_programs}
-            fi
-
-            break
-            ;;
-          [Nn]|[Nn][Oo])
-            break
-            ;;
-          *)
-            echo 'Please answer "y" or "n".'
-            ;;
-        esac
-      done
-    else
-      echo 'sudo: program not found!'
-    fi
+      case "${answer}" in
+        ''|[Yy]|[Yy][Ee][Ss])
+          run_as_root pacman --noconfirm -S --needed ${missing_programs}
+          break
+          ;;
+        [Nn]|[Nn][Oo])
+          break
+          ;;
+        *)
+          echo 'Please answer "y" or "n".'
+          ;;
+      esac
+    done
   else
     echo 'pacman: program not found!'
   fi
@@ -72,17 +73,8 @@ done
 
 if command -v pacman > /dev/null 2>&1
 then
-  if [ "$(id -u)" -ne 0 ]
-  then
-    if command -v sudo > /dev/null 2>&1
-    then
-      sudo cp -i pacman/pacman.conf /etc/pacman.conf && sudo cp -ri pacman/pacman.d /etc/
-    else
-      echo 'sudo: program not found!'
-    fi
-  else
-    cp -i pacman/pacman.conf /etc/pacman.conf && cp -ri pacman/pacman.d /etc/
-  fi
+  run_as_root cp -i pacman/pacman.conf /etc/pacman.conf &&
+  run_as_root cp -ri pacman/pacman.d /etc/
 else
   echo 'pacman: program not found!'
 fi
