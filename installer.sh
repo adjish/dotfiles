@@ -1,17 +1,14 @@
 #!/bin/sh
 
-run_as_root() {
-  if [ "$(id -u)" -eq 0 ]
-  then
-    "$@"
-  elif command -v sudo > /dev/null 2>&1
-  then
-    sudo "$@"
-  else
-    echo 'sudo: program not found!' >&2
-    return 1
-  fi
-}
+if [ "$(id -u)" -eq 0 ]
+then
+  run_as_root() { "$@"; }
+elif command -v sudo > /dev/null 2>&1
+then
+  run_as_root() { sudo "$@"; }
+else
+  run_as_root() { echo 'sudo: program not found!' >&2; return 1; }
+fi
 
 missing_programs=""
 
